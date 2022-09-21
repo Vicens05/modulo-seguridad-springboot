@@ -36,4 +36,5 @@ update USERS set NAME='Mariana' where username ='DNI46299021';
 delete from USERS where USERNAME ='DNI73267572';
 
 
+/*Consultar*/
 select * from Users
