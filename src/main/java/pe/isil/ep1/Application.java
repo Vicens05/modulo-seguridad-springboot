@@ -69,7 +69,7 @@ public class Application {
         }
 
 
-        //6. Cerramos
+        //6. Cerramos.
             con.close();
     }
 }
