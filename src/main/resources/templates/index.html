@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lista de usuarios</title>
+    </head>
+    <body>
+
+        <h1 th:text="${saludo}"></h1>
+        <br>
+        <h1 th:text="${despedida}"></h1>
+
+
+        <h1>A continuación se lista todos los usuarios</h1>
+        <h1 th:if="${lstusers.isEmpty()}">No hay usuarios registrados</h1>
+
+        <table th:if="${lstusers.size()>0}">
+            <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Fecha de nacimiento</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="user: ${lstusers}"><!--Crea una lista por cada User-->
+                <td th:text = "${user.getName()}"></td>
+                <td th:text = "${user.getLastname()}"></td>
+                <td th:text = "${user.getEmail()}"></td>
+                <td th:text = "${user.getBirthdate()}"></td>
+            </tr>
+            </tbody>
+        </table>
+
+
+
+    </body>
+</html>
