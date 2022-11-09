@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface CustomerRepository extends JpaRepository<Customer, Long> {
+public interface CustomerRepository extends JpaRepository<Customer, Long> { //EXTENDS para añadir las funcionalidades de JPA
 
     List<Customer> findCustomerByName(String name) ;
 
